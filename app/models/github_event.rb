@@ -4,6 +4,8 @@ class GitHubEvent
   PURCHASE = "marketplace_purchase"
   PULL_REQUEST = "pull_request"
   CANCELLATION = "cancelled"
+  INSTALLATION = "installation"
+  INSTALLATION_REPOSITORIES = "installation_repositories"
 
   def initialize(type:, body:)
     @body = body
@@ -22,6 +24,8 @@ class GitHubEvent
         github_id: body["marketplace_purchase"]["account"]["id"],
       )
       owner.active_private_repos.each(&:deactivate)
+    when INSTALLATION
+      update_installation
     else
       Rails.logger.info("Unhandled GitHub event: #{type} -- #{action}")
     end
@@ -50,6 +54,14 @@ class GitHubEvent
       owner.update!(marketplace_plan_id: nil)
     else
       raise "Unknown GitHub Marketplace action (#{action})"
+    end
+  end
+
+  def update_installation
+    case action
+    when "deleted"
+      repos = Repo.where(installation_id: body["installation"]["id"])
+      repos.update_all(active: false, installation_id: nil)
     end
   end
 
