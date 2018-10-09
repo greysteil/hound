@@ -54,7 +54,7 @@ GEM
       momentjs-rails (~> 2.8)
       sass-rails (~> 5.0)
       selectize-rails (~> 0.6)
-    analytics-ruby (2.2.2)
+    analytics-ruby (2.2.5)
       commander (~> 4.4)
     arel (8.0.0)
     attr_extras (4.4.0)
@@ -87,7 +87,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     columnize (0.8.9)
-    commander (4.4.3)
+    commander (4.4.6)
       highline (~> 1.7.2)
     concurrent-ruby (1.0.5)
     crack (0.4.3)
@@ -132,7 +132,7 @@ GEM
     hashdiff (0.3.6)
     hashie (3.4.6)
     high_voltage (3.0.0)
-    highline (1.7.8)
+    highline (1.7.10)
     html2haml (2.2.0)
       erubis (~> 2.7.0)
       haml (>= 4.0, < 6)
@@ -371,7 +371,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers (= 0.9.5)
   administrate (= 0.8.1)
-  analytics-ruby (~> 2.2.2)
+  analytics-ruby (~> 2.2.5)
   attr_extras
   autoprefixer-rails
   bourbon (~> 5.0)
