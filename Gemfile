@@ -4,7 +4,7 @@ ruby "2.5.1"
 
 gem "active_model_serializers", "0.9.5"
 gem "administrate", "0.8.1"
-gem "analytics-ruby", "~> 2.2.2", require: "segment/analytics"
+gem "analytics-ruby", "~> 2.2.5", require: "segment/analytics"
 gem "attr_extras"
 gem "autoprefixer-rails"
 gem "bourbon", "~> 5.0"
