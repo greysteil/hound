@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby "2.5.1"
 
-gem "active_model_serializers", "0.9.5"
+gem "active_model_serializers", "0.10.7"
 gem "administrate", "0.8.1"
 gem "analytics-ruby", "~> 2.2.2", require: "segment/analytics"
 gem "attr_extras"
