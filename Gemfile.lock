@@ -205,8 +205,8 @@ GEM
     omniauth-oauth2 (1.4.0)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
-    paranoia (2.3.1)
-      activerecord (>= 4.0, < 5.2)
+    paranoia (2.4.1)
+      activerecord (>= 4.0, < 5.3)
     pathspec (0.1.0)
     pg (0.19.0)
     public_suffix (3.0.3)
@@ -399,7 +399,7 @@ DEPENDENCIES
   nokogiri (>= 1.8.2)
   octokit
   omniauth-github
-  paranoia (~> 2.2)
+  paranoia (~> 2.4)
   pathspec
   pg
   puma
